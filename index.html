@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#78b9e8" />
+  <title>方块世界 — MC-web</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main id="game" aria-label="方块世界游戏">
+    <div id="crosshair" aria-hidden="true"></div>
+    <div id="status"><span id="coords">准备中…</span><span id="clock">☀ 白天</span></div>
+    <div id="toast" role="status"></div>
+    <section id="hotbar" aria-label="快捷栏"></section>
+    <div id="item-label"></div>
+    <div id="help">WASD 移动 · 空格跳跃 · 左键挖掘 · 右键放置 · E 背包 · Esc 暂停</div>
+  </main>
+
+  <section id="menu" class="screen">
+    <div class="card">
+      <h1>方块世界</h1>
+      <p>一个原创的浏览器体素沙盒原型</p>
+      <div class="menu-actions">
+        <button id="play">进入世界</button>
+        <button id="reset" class="secondary">重置世界</button>
+      </div>
+      <p class="fine">WASD 移动 · 空格跳跃 · 左键挖掘 · 右键放置 · E 查看背包</p>
+    </div>
+  </section>
+
+  <section id="inventory" class="screen hidden">
+    <div class="card inventory-card">
+      <h2>物品栏</h2>
+      <p>选择快捷栏物品，按数字键或滚轮切换</p>
+      <div id="inventory-grid"></div>
+      <button id="close-inventory">返回游戏</button>
+    </div>
+  </section>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
